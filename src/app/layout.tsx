@@ -1,16 +1,16 @@
-import { Menu } from '@/components/Menu'
-import { Roboto } from 'next/font/google'
-import './globals.css'
+import { Menu } from '@/components/Menu';
+import { Roboto } from 'next/font/google';
+import './globals.css';
 
 const roboto = Roboto({
   subsets: ['latin'],
   weight: ['400', '500'],
-})
+});
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
     <html lang="en">
@@ -18,7 +18,7 @@ export default function RootLayout({
         className={`${roboto.className} bg-surface-0 text-on-surface min-h-screen min-w-screen`}
       >
         <div className="flex gap-3 h-screen">
-          <div className="w-60 mt-4 ml-2 mr-3">
+          <div className="w-60 mt-4 ml-3">
             <Menu />
           </div>
           <div className="flex-1 flex flex-col gap-3">
@@ -29,5 +29,5 @@ export default function RootLayout({
         </div>
       </body>
     </html>
-  )
+  );
 }
