@@ -4,7 +4,6 @@ import Logo from '@/assets/logo.png';
 import Image from 'next/image';
 import { Icon } from '../Icon';
 import {
-  Add,
   CloudOutlined,
   DeleteOutline,
   DevicesOutlined,
@@ -18,6 +17,7 @@ import {
 import { OverridableComponent } from '@mui/material/OverridableComponent';
 import { SvgIconTypeMap } from '@mui/material';
 import { usePathname } from 'next/navigation';
+import { ButtonNewAction } from '../ButtonNewAction';
 
 type MenuItem = {
   name: string;
@@ -80,10 +80,7 @@ export function Menu() {
   return (
     <div className="flex flex-col gap-6 items-start w-full">
       <Image src={Logo} alt="Logo" />
-      <button className="flex gap-2 items-center p-4 bg-surface-2 rounded-2xl shadow hover:shadow-lg hover:bg-surface-3 transition-colors">
-        <Icon name={Add} />
-        <span>Novo</span>
-      </button>
+      <ButtonNewAction />
       <div className="w-full">
         <ul>
           {MENU.map((item) => (
