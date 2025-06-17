@@ -1,6 +1,7 @@
 import { Menu } from '@/components/Menu';
 import { Roboto } from 'next/font/google';
 import './globals.css';
+import { Header } from '@/components/Header';
 
 const roboto = Roboto({
   subsets: ['latin'],
@@ -22,10 +23,12 @@ export default function RootLayout({
             <Menu />
           </div>
           <div className="flex-1 flex flex-col gap-3">
-            <div className="bg-surface-1 h-16">{/* header */}</div>
-            <div className="bg-surface-1 flex-1">{children}</div>
+            <Header />
+            <div className="flex h-full">
+              <div className="bg-surface-1 flex-1">{children}</div>
+              <div className="w-8"></div>
+            </div>
           </div>
-          <div className="w-8"></div>
         </div>
       </body>
     </html>
