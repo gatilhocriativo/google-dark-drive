@@ -41,12 +41,12 @@ export function ButtonNewAction() {
       </button>
       {isOpen && (
         <div
-          className="absolute inset-0 bg-surface-2 py-2 w-[260px] h-fit rounded z-20"
+          className="absolute inset-0 bg-surface-1 py-2 w-[260px] h-fit rounded z-20 shadow-lg"
           ref={dropdown}
         >
           <ul className="h-full flex flex-col gap-2">
             <li className="w-full">
-              <button className="flex gap-2 px-3 py-1 items-center hover:bg-surface-1 w-full">
+              <button className="flex gap-2 px-3 py-1 items-center hover:bg-surface-0 w-full">
                 <Icon name={CreateNewFolder} />
                 <span>Nova Pasta</span>
               </button>
@@ -55,13 +55,13 @@ export function ButtonNewAction() {
               <div className="h-[1px] w-full bg-surface-1"></div>
             </li>
             <li className="w-full">
-              <button className="flex gap-2 px-3 py-1 items-center hover:bg-surface-1 w-full">
+              <button className="flex gap-2 px-3 py-1 items-center hover:bg-surface-0 w-full">
                 <Icon name={UploadFile} />
                 <span>Upload de arquivo</span>
               </button>
             </li>
             <li className="w-full">
-              <button className="flex gap-2 px-3 py-1 items-center hover:bg-surface-1 w-full">
+              <button className="flex gap-2 px-3 py-1 items-center hover:bg-surface-0 w-full">
                 <Icon name={DriveFolderUpload} />
                 <span>Upload de pasta</span>
               </button>
