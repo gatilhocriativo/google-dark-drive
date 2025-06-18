@@ -5,6 +5,7 @@ import {
   Settings,
 } from '@mui/icons-material';
 import { Icon } from '../Icon';
+import Image from 'next/image';
 
 export function Header() {
   return (
@@ -22,7 +23,14 @@ export function Header() {
         <span className="flex items-center justify-center h-8 w-8 bg-surface-0 hover:bg-surface-2 rounded-full transition-colors cursor-pointer">
           <Icon name={Apps} />
         </span>
-        <div className="h-8 w-8 rounded-full bg-slate-500"></div>
+        <div className="h-8 w-8 rounded-full bg-slate-500 overflow-hidden">
+          <Image
+            src="https://www.github.com/decioneto.png"
+            alt="avatar"
+            width={32}
+            height={32}
+          />
+        </div>
       </div>
     </div>
   );
